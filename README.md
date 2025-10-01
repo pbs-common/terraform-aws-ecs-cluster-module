@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-ecs-cluster-module?ref=1.0.4
+github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -26,7 +26,7 @@ Integrate this module like so:
 
 ```hcl
 module "cluster" {
-  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=1.0.4"
+  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -42,7 +42,7 @@ module "cluster" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`1.0.4`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -58,14 +58,14 @@ Below is automatically generated documentation on this Terraform module using [t
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.2 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.5.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.13.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.24.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.14.1 |
 
 ## Modules
 
@@ -99,6 +99,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (sharedtools, dev, staging, qa, prod) | `string` | n/a | yes |
 | <a name="input_organization"></a> [organization](#input\_organization) | Organization using this module. Used to prefix tags so that they are easily identified as being from your organization | `string` | n/a | yes |
+| <a name="input_owner"></a> [owner](#input\_owner) | Tag used to group resources according to product | `string` | n/a | yes |
 | <a name="input_product"></a> [product](#input\_product) | Tag used to group resources according to product | `string` | n/a | yes |
 | <a name="input_repo"></a> [repo](#input\_repo) | Tag used to point to the repo using this module | `string` | n/a | yes |
 | <a name="input_ec2_backed"></a> [ec2\_backed](#input\_ec2\_backed) | Whether or not to provision an autoscaled EC2 fleet to back the cluster | `bool` | `false` | no |
