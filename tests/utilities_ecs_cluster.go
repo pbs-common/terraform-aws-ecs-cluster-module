@@ -20,6 +20,7 @@ func testECSCluster(t *testing.T, variant string) {
 			"name": fmt.Sprintf("example-%s", clusterName),
 		},
 		LockTimeout: "5m",
+		Upgrade:      true,
 	}
 
 	var outputClusterName string
