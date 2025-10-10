@@ -6,5 +6,6 @@ resource "aws_ecs_cluster" "cluster" {
     value = "enabled"
   }
 
+
   tags = local.tags
 }
